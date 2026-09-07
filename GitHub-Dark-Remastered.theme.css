@@ -8,8 +8,8 @@
 */
 
 /* GitHub Dark – forced for modern Discord + Vencord */
+/* Native Discord base variable overrides to replace main surface wildcards */
 
-/* GitHub Dark – forced for modern Discord + Vencord */
 .theme-dark,
 .theme-light,
 :root {
@@ -47,7 +47,6 @@
     --brand-experiment: #5865f2 !important;
     --brand-experiment-560: #4752c4 !important;
 
-    /* Native Discord base variable overrides to replace main surface wildcards */
     --background-base-low: #0d1117 !important;
     --background-base-lower: #090c10 !important;
     --background-base-lowest: #070a10 !important;
@@ -59,7 +58,6 @@
     --bg-overlay-sidebar: #0d1117 !important;
 }
 
-/* Specific structural layout target overrides */
 [class*="sidebar_"],
 [class*="panels_"],
 [class*="members_"] {
@@ -67,7 +65,6 @@
     border-color: #30363d !important;
 }
 
-/* Chat Input Container */
 [class*="channelTextArea_"],
 [class*="scrollableContainer_"] {
     background-color: var(--channeltextarea-background) !important;
@@ -76,14 +73,12 @@
     box-shadow: none !important;
 }
 
-/* Text area inside chat input */
 [class*="slateTextArea_"],
 [class*="placeholder_"] {
     background: transparent !important;
     color: #c9d1d9 !important;
 }
 
-/* Attachment (+) button */
 [class*="attachButton_"] {
     background: transparent !important;
     color: #8b949e !important;
@@ -94,7 +89,6 @@
     border-radius: 6px !important;
 }
 
-/* Chat Input Action Buttons (Gift, GIF, Sticker, Emoji, Apps) */
 :is([class*="buttons_"], [class*="buttonContainer_"]) > *,
 [class*="expression-picker-chat-input-button"],
 [aria-label*="gift" i],
@@ -119,18 +113,14 @@
     background: rgba(33, 38, 45, 0.55) !important;
     color: #f0f6fc !important;
 }
-
-/* Clean background SVGs in chat buttons */
 :is([class*="buttons_"], [class*="buttonContainer_"]) svg {
     background: transparent !important;
 }
 
-/* ===== Message hover background ===== */
 :is([class*="message_"], [class*="messageListItem_"], [class*="cozyMessage_"], [class*="groupStart_"]):hover {
     background-color: var(--background-message-hover) !important;
 }
 
-/* ===== Message floating action bar (Reactions, Reply, Edit, etc.) ===== */
 :is([class*="buttonContainer_"], [class*="hoverBar_"], [class*="actionBar_"], [class*="toolbar_"]) {
     background-color: #161b22 !important;
     border: 1px solid #30363d !important;
@@ -149,13 +139,11 @@
     color: #f0f6fc !important;
 }
 
-/* Low-contrast dark username color fix */
 :is(span[class*="name_"], span[class*="username_"], span[class*="nameContainer_"]):is([style*="color: rgb(10, 10, 10)"], [style*="color: rgb(15, 15, 15)"]),
 span[class*="nameContainer_"]:is([style*="color: rgb(10, 10, 10)"], [style*="color: rgb(15, 15, 15)"]) * {
     color: #c9d1d9 !important;
 }
 
-/* Direct wrapper targeting for message action bar */
 [class*="message_"] [class*="buttons_"],
 div[class*="container_"][role="group"],
 :is([class*="hoverBar_"], [class*="actionBar_"], [class*="toolbar_"]) {
