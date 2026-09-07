@@ -9,6 +9,7 @@
 
 /* GitHub Dark – forced for modern Discord + Vencord */
 
+/* GitHub Dark – forced for modern Discord + Vencord */
 .theme-dark,
 .theme-light,
 :root {
@@ -24,7 +25,7 @@
     --background-modifier-accent: #21262d !important;
 
     --channeltextarea-background: #070a10 !important;
-    --background-message-hover: rgba(4, 4, 5, 0.1) !important;
+    --background-message-hover: rgba(33, 38, 45, 0.45) !important;
     --background-mentioned: rgba(13, 17, 23, 0.5) !important;
     --background-mentioned-hover: rgba(20, 33, 53, 0.3) !important;
 
@@ -46,91 +47,61 @@
     --brand-experiment: #5865f2 !important;
     --brand-experiment-560: #4752c4 !important;
 
-    /* Newer Discord variables */
+    /* Native Discord base variable overrides to replace main surface wildcards */
     --background-base-low: #0d1117 !important;
     --background-base-lower: #090c10 !important;
     --background-base-lowest: #070a10 !important;
     --background-surface-high: #161b22 !important;
     --background-surface-higher: #21262d !important;
     --background-surface-highest: #30363d !important;
+    --bg-overlay-app-frame: #090c10 !important;
+    --bg-overlay-chat: #090c10 !important;
+    --bg-overlay-sidebar: #0d1117 !important;
 }
 
-/* Force main app backgrounds */
-[class*="app-"] ,
-[class*="bg-"] ,
-[class*="layers-"] ,
-[class*="container-"] {
-    background-color: var(--background-primary) !important;
-}
-
-/* Sidebars & panels */
-[class*="sidebar-"] ,
-[class*="panels-"] ,
-[class*="members-"] {
+/* Specific structural layout target overrides */
+[class*="sidebar_"],
+[class*="panels_"],
+[class*="members_"] {
     background-color: var(--background-secondary) !important;
     border-color: #30363d !important;
 }
 
-/* Chat area */
-[class*="chat-"] ,
-[class*="chatContent-"] {
-    background-color: var(--background-primary) !important;
-}
-
-/* Message input */
-[class*="channelTextArea-"] ,
-[class*="scrollableContainer-"] {
-    background-color: var(--channeltextarea-background) !important;
-    border: 1px solid #30363d !important;
-    border-radius: 6px !important;
-}
-
-/* ===== Message box + right-side icons (GitHub Dark) ===== */
-
-/* Main input container */
+/* Chat Input Container */
 [class*="channelTextArea_"],
 [class*="scrollableContainer_"] {
-    background-color: #070a10 !important;
+    background-color: var(--channeltextarea-background) !important;
     border: 1px solid #30363d !important;
     border-radius: 8px !important;
     box-shadow: none !important;
 }
 
-/* Inner text area */
-[class*="textArea_"],
+/* Text area inside chat input */
 [class*="slateTextArea_"],
 [class*="placeholder_"] {
     background: transparent !important;
     color: #c9d1d9 !important;
 }
 
-/* The + attach button on the left */
-[class*="attachButton_"],
-[class*="attachButtonInner_"] {
+/* Attachment (+) button */
+[class*="attachButton_"] {
     background: transparent !important;
     color: #8b949e !important;
 }
-[class*="attachButton_"]:hover,
-[class*="attachButtonInner_"]:hover {
+[class*="attachButton_"]:hover {
     background: rgba(33, 38, 45, 0.5) !important;
     color: #f0f6fc !important;
     border-radius: 6px !important;
 }
 
-/* Right-side buttons (Gift, GIF, Stickers, Emoji, Apps) */
-[class*="buttons_"] > * ,
-[class*="buttonContainer_"] > * ,
+/* Chat Input Action Buttons (Gift, GIF, Sticker, Emoji, Apps) */
+:is([class*="buttons_"], [class*="buttonContainer_"]) > *,
 [class*="expression-picker-chat-input-button"],
-[class*="button_"][aria-label*="gift" i],
-[class*="button_"][aria-label*="GIF" i],
-[class*="button_"][aria-label*="sticker" i],
-[class*="button_"][aria-label*="emoji" i],
-[class*="button_"][aria-label*="Apps" i],
-div[aria-label*="Send a gift" i],
-div[aria-label*="Open GIF" i],
-div[aria-label*="Open sticker" i],
-div[aria-label*="Select emoji" i],
-div[aria-label*="Open Apps" i] {
+[aria-label*="gift" i],
+[aria-label*="GIF" i],
+[aria-label*="sticker" i],
+[aria-label*="emoji" i],
+[aria-label*="Apps" i] {
     background: transparent !important;
     background-color: transparent !important;
     border-radius: 6px !important;
@@ -138,89 +109,58 @@ div[aria-label*="Open Apps" i] {
     box-shadow: none !important;
 }
 
-/* Hover state for those icons */
-[class*="buttons_"] > *:hover ,
-[class*="buttonContainer_"] > *:hover ,
+:is([class*="buttons_"], [class*="buttonContainer_"]) > *:hover,
 [class*="expression-picker-chat-input-button"]:hover,
-[class*="button_"][aria-label*="gift" i]:hover,
-[class*="button_"][aria-label*="GIF" i]:hover,
-[class*="button_"][aria-label*="sticker" i]:hover,
-[class*="button_"][aria-label*="emoji" i]:hover,
-[class*="button_"][aria-label*="Apps" i]:hover,
-div[aria-label*="Send a gift" i]:hover,
-div[aria-label*="Open GIF" i]:hover,
-div[aria-label*="Open sticker" i]:hover,
-div[aria-label*="Select emoji" i]:hover,
-div[aria-label*="Open Apps" i]:hover {
+[aria-label*="gift" i]:hover,
+[aria-label*="GIF" i]:hover,
+[aria-label*="sticker" i]:hover,
+[aria-label*="emoji" i]:hover,
+[aria-label*="Apps" i]:hover {
     background: rgba(33, 38, 45, 0.55) !important;
-    background-color: rgba(33, 38, 45, 0.55) !important;
     color: #f0f6fc !important;
 }
 
-/* Remove any remaining square/blocky backgrounds inside the buttons */
-[class*="buttons_"] [class*="button_"],
-[class*="buttons_"] svg,
-[class*="buttonContainer_"] svg {
+/* Clean background SVGs in chat buttons */
+:is([class*="buttons_"], [class*="buttonContainer_"]) svg {
     background: transparent !important;
 }
 
 /* ===== Message hover background ===== */
-[class*="message_"]:hover,
-[class*="messageListItem_"]:hover,
-[class*="cozyMessage_"]:hover,
-[class*="groupStart_"]:hover {
-    background-color: rgba(33, 38, 45, 0.45) !important;   /* soft GitHub-style hover */
+:is([class*="message_"], [class*="messageListItem_"], [class*="cozyMessage_"], [class*="groupStart_"]):hover {
+    background-color: var(--background-message-hover) !important;
 }
 
-/* ===== Message action bar (emoji / react / reply / etc) ===== */
-[class*="buttonContainer_"],
-[class*="buttons_"][class*="wrapper_"],
-[class*="message_"] [class*="buttons_"],
-[class*="hoverBar_"],
-[class*="actionBar_"],
-[class*="toolbar_"] {
+/* ===== Message floating action bar (Reactions, Reply, Edit, etc.) ===== */
+:is([class*="buttonContainer_"], [class*="hoverBar_"], [class*="actionBar_"], [class*="toolbar_"]) {
     background-color: #161b22 !important;
     border: 1px solid #30363d !important;
     border-radius: 8px !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Make the individual buttons inside the bar look clean */
-[class*="buttonContainer_"] button,
-[class*="buttons_"] button,
-[class*="hoverBar_"] button,
-[class*="actionBar_"] button {
+:is([class*="buttonContainer_"], [class*="hoverBar_"], [class*="actionBar_"], [class*="toolbar_"]) button {
     background: transparent !important;
     color: #8b949e !important;
     border-radius: 6px !important;
 }
 
-[class*="buttonContainer_"] button:hover,
-[class*="buttons_"] button:hover,
-[class*="hoverBar_"] button:hover,
-[class*="actionBar_"] button:hover {
+:is([class*="buttonContainer_"], [class*="hoverBar_"], [class*="actionBar_"], [class*="toolbar_"]) button:hover {
     background-color: rgba(33, 38, 45, 0.7) !important;
     color: #f0f6fc !important;
 }
 
-/* High specificity – targets the exact element from your inspect */
-/* Changes names that are #0a0a0a or #0f0f0f to a lighter color when naming roles */
-
-span[class*="name_"][class*="username_"][style*="color: rgb(10, 10, 10)"],
-span[class*="name_"][class*="username_"][style*="color: rgb(15, 15, 15)"],
-span[class*="name_"][style*="color: rgb(10, 10, 10)"],
-span[class*="name_"][style*="color: rgb(15, 15, 15)"],
-span[class*="username_"][style*="color: rgb(10, 10, 10)"],
-span[class*="username_"][style*="color: rgb(15, 15, 15)"] {
+/* Low-contrast dark username color fix */
+:is(span[class*="name_"], span[class*="username_"], span[class*="nameContainer_"]):is([style*="color: rgb(10, 10, 10)"], [style*="color: rgb(15, 15, 15)"]),
+span[class*="nameContainer_"]:is([style*="color: rgb(10, 10, 10)"], [style*="color: rgb(15, 15, 15)"]) * {
     color: #c9d1d9 !important;
 }
 
-span[class*="nameContainer_"][style*="color: rgb(10, 10, 10)"],
-span[class*="nameContainer_"][style*="color: rgb(15, 15, 15)"] {
-    color: #c9d1d9 !important;
-}
-
-span[class*="nameContainer_"][style*="color: rgb(10, 10, 10)"] *,
-span[class*="nameContainer_"][style*="color: rgb(15, 15, 15)"] * {
-    color: #c9d1d9 !important;
+/* Direct wrapper targeting for message action bar */
+[class*="message_"] [class*="buttons_"],
+div[class*="container_"][role="group"],
+:is([class*="hoverBar_"], [class*="actionBar_"], [class*="toolbar_"]) {
+    background-color: #161b22 !important;
+    border: 1px solid #30363d !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
 }
