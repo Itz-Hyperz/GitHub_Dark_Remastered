@@ -10,145 +10,230 @@
 /* GitHub Dark – forced for modern Discord + Vencord */
 /* Native Discord base variable overrides to replace main surface wildcards */
 
-.theme-dark,
-.theme-light,
-:root {
-    --background-primary: #090c10 !important;
-    --background-secondary: #0d1117 !important;
-    --background-secondary-alt: #161b22 !important;
-    --background-tertiary: #070a10 !important;
-    --background-accent: #111d2e !important;
-    --background-floating: #161b22 !important;
-    --background-modifier-hover: rgba(33, 38, 45, 0.4) !important;
-    --background-modifier-active: rgba(33, 38, 45, 0.55) !important;
-    --background-modifier-selected: rgba(33, 38, 45, 0.65) !important;
-    --background-modifier-accent: #21262d !important;
+/* my discord theme!! */
+/* made it dark like github */
 
-    --channeltextarea-background: #070a10 !important;
-    --background-message-hover: rgba(33, 38, 45, 0.45) !important;
-    --background-mentioned: rgba(13, 17, 23, 0.5) !important;
-    --background-mentioned-hover: rgba(20, 33, 53, 0.3) !important;
+.theme-dark, .theme-light, :root {
+--background-primary: #090c10 !important;
+--background-secondary: #0d1117 !important;
+--background-secondary-alt: #161b22 !important;
+--background-tertiary: #070a10 !important;
+--background-accent: #111d2e !important;
+--background-floating: #161b22 !important;
+--background-modifier-hover: rgba(33, 38, 45, 0.4) !important;
+--background-modifier-active: rgba(33, 38, 45, 0.55) !important;
+--background-modifier-selected: rgba(33, 38, 45, 0.65) !important;
+--background-modifier-accent: #21262d !important;
 
-    --header-primary: #f0f6fc !important;
-    --header-secondary: #8b949e !important;
-    --text-normal: #c9d1d9 !important;
-    --text-muted: #8b949e !important;
-    --text-link: #58a6ff !important;
-    --channels-default: #8b949e !important;
-    --interactive-normal: #8b949e !important;
-    --interactive-hover: #dcddde !important;
-    --interactive-active: #ffffff !important;
-    --interactive-muted: #4c5258 !important;
+--channeltextarea-background: #070a10 !important;
+--background-message-hover: rgba(33, 38, 45, 0.45) !important;
+--background-mentioned: rgba(13, 17, 23, 0.5) !important;
+--background-mentioned-hover: rgba(20, 33, 53, 0.3) !important;
 
-    --scrollbar-thin-thumb: #161b22 !important;
-    --scrollbar-auto-thumb: #161b22 !important;
-    --scrollbar-auto-track: rgba(17, 19, 24, 0.4) !important;
+--header-primary: #f0f6fc !important;
+--header-secondary: #8b949e !important;
+--text-normal: #c9d1d9 !important;
+--text-muted: #8b949e !important;
+--text-link: #58a6ff !important;
+--channels-default: #8b949e !important;
+--interactive-normal: #8b949e !important;
+--interactive-hover: #dcddde !important;
+--interactive-active: #ffffff !important;
+--interactive-muted: #4c5258 !important;
 
-    --brand-experiment: #5865f2 !important;
-    --brand-experiment-560: #4752c4 !important;
+--scrollbar-thin-thumb: #161b22 !important;
+--scrollbar-auto-thumb: #161b22 !important;
+--scrollbar-auto-track: rgba(17, 19, 24, 0.4) !important;
 
-    --background-base-low: #0d1117 !important;
-    --background-base-lower: #090c10 !important;
-    --background-base-lowest: #070a10 !important;
-    --background-surface-high: #161b22 !important;
-    --background-surface-higher: #21262d !important;
-    --background-surface-highest: #30363d !important;
-    --bg-overlay-app-frame: #090c10 !important;
-    --bg-overlay-chat: #090c10 !important;
-    --bg-overlay-sidebar: #0d1117 !important;
+--brand-experiment: #5865f2 !important;
+--brand-experiment-560: #4752c4 !important;
+
+--background-base-low: #0d1117 !important;
+--background-base-lower: #090c10 !important;
+--background-base-lowest: #070a10 !important;
+--background-surface-high: #161b22 !important;
+--background-surface-higher: #21262d !important;
+--background-surface-highest: #30363d !important;
+--bg-overlay-app-frame: #090c10 !important;
+--bg-overlay-chat: #090c10 !important;
+--bg-overlay-sidebar: #0d1117 !important;
 }
 
-[class*="sidebar_"],
-[class*="panels_"],
-[class*="members_"] {
-    background-color: var(--background-secondary) !important;
-    border-color: #30363d !important;
+/* side bar and stuff */
+.sidebar__5e434 {
+background-color: var(--background-secondary);
+border-color: #30363d;
 }
 
-[class*="channelTextArea_"],
-[class*="scrollableContainer_"] {
-    background-color: var(--channeltextarea-background) !important;
-    border: 1px solid #30363d !important;
-    border-radius: 8px !important;
-    box-shadow: none !important;
+.panels__5e434 {
+background-color: var(--background-secondary);
+border-color: #30363d;
 }
 
-[class*="slateTextArea_"],
-[class*="placeholder_"] {
-    background: transparent !important;
-    color: #c9d1d9 !important;
+.members__6e500 {
+background-color: var(--background-secondary);
+border-color: #30363d;
 }
 
-[class*="attachButton_"] {
-    background: transparent !important;
-    color: #8b949e !important;
-}
-[class*="attachButton_"]:hover {
-    background: rgba(33, 38, 45, 0.5) !important;
-    color: #f0f6fc !important;
-    border-radius: 6px !important;
+/* chat box */
+.channelTextArea_f75fb0, .channelTextArea__74017 {
+background-color: var(--channeltextarea-background);
+border: 1px solid #30363d;
+border-radius: 8px;
+box-shadow: none;
 }
 
-:is([class*="buttons_"], [class*="buttonContainer_"]) > *,
-[class*="expression-picker-chat-input-button"],
-[aria-label*="gift" i],
-[aria-label*="GIF" i],
-[aria-label*="sticker" i],
-[aria-label*="emoji" i],
-[aria-label*="Apps" i] {
-    background: transparent !important;
-    background-color: transparent !important;
-    border-radius: 6px !important;
-    color: #8b949e !important;
-    box-shadow: none !important;
+.scrollableContainer__74017 {
+background-color: var(--channeltextarea-background);
+border: 1px solid #30363d;
+border-radius: 8px;
+box-shadow: none;
 }
 
-:is([class*="buttons_"], [class*="buttonContainer_"]) > *:hover,
-[class*="expression-picker-chat-input-button"]:hover,
-[aria-label*="gift" i]:hover,
-[aria-label*="GIF" i]:hover,
-[aria-label*="sticker" i]:hover,
-[aria-label*="emoji" i]:hover,
-[aria-label*="Apps" i]:hover {
-    background: rgba(33, 38, 45, 0.55) !important;
-    color: #f0f6fc !important;
-}
-:is([class*="buttons_"], [class*="buttonContainer_"]) svg {
-    background: transparent !important;
+.slateTextArea_ec4baf {
+background: transparent;
+color: #c9d1d9;
 }
 
-:is([class*="message_"], [class*="messageListItem_"], [class*="cozyMessage_"], [class*="groupStart_"]):hover {
-    background-color: var(--background-message-hover) !important;
+.placeholder__1b31f {
+background: transparent;
+color: #c9d1d9;
 }
 
-:is([class*="buttonContainer_"], [class*="hoverBar_"], [class*="actionBar_"], [class*="toolbar_"]) {
-    background-color: #161b22 !important;
-    border: 1px solid #30363d !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+/* the + button */
+.attachButton__0923f, .attachButton__74017 {
+background: transparent;
+color: #8b949e;
 }
 
-:is([class*="buttonContainer_"], [class*="hoverBar_"], [class*="actionBar_"], [class*="toolbar_"]) button {
-    background: transparent !important;
-    color: #8b949e !important;
-    border-radius: 6px !important;
+.attachButton__0923f:hover, .attachButton__74017:hover {
+background: rgba(33, 38, 45, 0.5);
+color: #f0f6fc;
+border-radius: 6px;
 }
 
-:is([class*="buttonContainer_"], [class*="hoverBar_"], [class*="actionBar_"], [class*="toolbar_"]) button:hover {
-    background-color: rgba(33, 38, 45, 0.7) !important;
-    color: #f0f6fc !important;
+/* gif sticker emoji buttons and stuff */
+.buttons__74017 > * {
+background: transparent;
+background-color: transparent;
+border-radius: 6px;
+color: #8b949e;
+box-shadow: none;
 }
 
-:is(span[class*="name_"], span[class*="username_"], span[class*="nameContainer_"]):is([style*="color: rgb(10, 10, 10)"], [style*="color: rgb(15, 15, 15)"]),
-span[class*="nameContainer_"]:is([style*="color: rgb(10, 10, 10)"], [style*="color: rgb(15, 15, 15)"]) * {
-    color: #c9d1d9 !important;
+.buttonContainer__74017 {
+background: transparent;
+background-color: transparent;
+border-radius: 6px;
+color: #8b949e;
+box-shadow: none;
 }
 
-[class*="message_"] [class*="buttons_"],
-div[class*="container_"][role="group"],
-:is([class*="hoverBar_"], [class*="actionBar_"], [class*="toolbar_"]) {
-    background-color: #161b22 !important;
-    border: 1px solid #30363d !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+.expression-picker-chat-input-button {
+background: transparent;
+background-color: transparent;
+border-radius: 6px;
+color: #8b949e;
+box-shadow: none;
+}
+
+.buttons__74017 > *:hover {
+background: rgba(33, 38, 45, 0.55);
+color: #f0f6fc;
+}
+
+.buttonContainer__74017:hover {
+background: rgba(33, 38, 45, 0.55);
+color: #f0f6fc;
+}
+
+.expression-picker-chat-input-button:hover {
+background: rgba(33, 38, 45, 0.55);
+color: #f0f6fc;
+}
+
+.buttons__74017 svg {
+background: transparent;
+}
+
+/* when u hover on messages */
+.message__5126c:hover {
+background-color: var(--background-message-hover);
+}
+
+.messageListItem__5126c:hover {
+background-color: var(--background-message-hover);
+}
+
+.cozyMessage__5126c:hover {
+background-color: var(--background-message-hover);
+}
+
+.groupStart__5126c:hover {
+background-color: var(--background-message-hover);
+}
+
+/* the little bar that pops up on messages */
+.buttons__5126c {
+background-color: #161b22;
+border: 1px solid #30363d;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.container__040f0 {
+background-color: #161b22;
+border: 1px solid #30363d;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.buttonContainer_c19a55 {
+background-color: #161b22;
+border: 1px solid #30363d;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.buttons__5126c button {
+background: transparent;
+color: #8b949e;
+border-radius: 6px;
+}
+
+.container__040f0 button {
+background: transparent;
+color: #8b949e;
+border-radius: 6px;
+}
+
+.hoverBarButton_f84418 {
+background: transparent;
+color: #8b949e;
+border-radius: 6px;
+}
+
+.buttons__5126c button:hover {
+background-color: rgba(33, 38, 45, 0.7);
+color: #f0f6fc;
+}
+
+.container__040f0 button:hover {
+background-color: rgba(33, 38, 45, 0.7);
+color: #f0f6fc;
+}
+
+.hoverBarButton_f84418:hover {
+background-color: rgba(33, 38, 45, 0.7);
+color: #f0f6fc;
+}
+
+/* fix for super dark names that u cant read */
+.username_c19a55[style*="color: rgb(10, 10, 10)"],
+.username_c19a55[style*="color: rgb(15, 15, 15)"],
+.nameContainer__703b9[style*="color: rgb(10, 10, 10)"],
+.nameContainer__703b9[style*="color: rgb(15, 15, 15)"],
+.nameContainer__703b9[style*="color: rgb(10, 10, 10)"] *,
+.nameContainer__703b9[style*="color: rgb(15, 15, 15)"] * {
+color: #c9d1d9 !important;
 }
