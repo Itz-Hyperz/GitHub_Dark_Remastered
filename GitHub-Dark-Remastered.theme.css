@@ -1,17 +1,13 @@
 /**
  * @name GitHub Dark Remastered
  * @author ThatGuyHyperz (new), Sango (original), adapted for Vencord
- * @version 3.1.0
+ * @version 3.2.0
  * @description A theme based off of the GitHub Dark theme. Variables updated for modern Discord + Vencord. Will resume updates periodically.
  * @source https://github.com/itz-hyperz/GitHub_Dark_Remastered
  * @website https://github.com/itz-hyperz
 */
 
 /* GitHub Dark – forced for modern Discord + Vencord */
-/* Native Discord base variable overrides to replace main surface wildcards */
-
-/* my discord theme!! */
-/* made it dark like github */
 
 .theme-dark, .theme-light, :root {
 --background-primary: #090c10 !important;
