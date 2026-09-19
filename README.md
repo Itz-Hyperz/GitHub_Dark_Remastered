@@ -1,6 +1,8 @@
 # GitHub_Dark_Remastered
 A remastered version of GitHub Dark theme by moistp1ckle. Original repo here: https://github.com/moistp1ckle/GitHub_Dark
 
+Use on BetterDiscord or Vencord (superior) - https://vencord.dev/
+
 I will update this periodically as I will be using it on my personal Discord client. Support issues can be brought to our Discord server as-well regarding the theme itself. Discord: [https://discord.gg/sbAst6MUPw](https://discord.gg/sbAst6MUPw)
 
 # Theme Preview 👀
